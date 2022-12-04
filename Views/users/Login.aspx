@@ -7,7 +7,6 @@
                 <div class="card shadow">              
                     <div class="card-body">
                         <h5 class="card-title">Login</h5>
-                  
                             <div class="mb-3">
                                 <label class="form-label" for="username">Username</label>                            
                                 <asp:TextBox ID="Idtxt" class="form-control" runat="server"></asp:TextBox>
@@ -21,7 +20,6 @@
                                 <asp:Button ID="SignUp" class="btn btn-success" runat="server" Text="SignUp"></asp:Button>
                                 <asp:Button ID="Find" class="btn btn-success" runat="server" Text="아이디찾기/비밀번호찾기"></asp:Button>
                             </div>
-                    
                     </div>
                 </div>
             </div>
