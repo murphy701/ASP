@@ -49,15 +49,14 @@
 </head>
 
 <body class="d-flex text-center text-white bg-dark">
+
     <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
                 <nav class="nav nav-masthead justify-content-center float-md-right">
                     <a class="navbar-brand" href="homePage.aspx">Community</a>
                     <a class="nav-link ms-auto" href="users/login.aspx">Login</a>
-                    <a class="nav-link" href="users/SignUp.aspx">Register</a>
-                    <a class="nav-link" href="users/Logout.aspx">Logout</a>                  
-                </nav>
-           
+                    <a class="nav-link" href="users/SignUp.aspx">Register</a>                                
+                </nav>          
         </header>
         <main class="px-3">
             <h1>Community</h1>
@@ -70,7 +69,7 @@
         <footer class="mt-auto text-white-50">
             <p>&copy; 2022 </p>
         </footer>
-    </div>
+    </div>   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
