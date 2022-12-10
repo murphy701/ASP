@@ -20,21 +20,21 @@ namespace community.main
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings[""].ConnectionString);//conString 아직 연결 안됨
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Community"].ConnectionString);//conString 아직 연결 안됨
 
             SqlCommand cmd = new SqlCommand();
 
             cmd.Connection = con;
 
-            cmd.CommandText = "select * from Member where id=@id and pw=@pw";
+            cmd.CommandText = "select * from people where id=@id and password=@password";
 
-            cmd.Parameters.Add("@id", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@id", SqlDbType.VarChar, 50);
 
-            cmd.Parameters.Add("@pw", SqlDbType.VarChar, 20);
+            cmd.Parameters.Add("@password", SqlDbType.VarChar, 50);
 
             cmd.Parameters["@id"].Value = Idtxt.Text;
 
-            cmd.Parameters["@pw"].Value = Pwtxt.Text;
+            cmd.Parameters["@password"].Value = Pwtxt.Text;
 
             con.Open();
 
@@ -51,7 +51,7 @@ namespace community.main
                 //추가 정보 기억
                 Response.Cookies["name"].Value = reader["name"].ToString();
                 Response.Cookies["email"].Value = reader["email"].ToString();
-                script = "<script type='text/javascript'>alert('로그인 성공!!\\r\\n게시판으로 이동합니다.'); location.href='Main.aspx';</script>";//메인 페이지를 Main.aspx로 만들기
+                script = "<script type='text/javascript'>alert('로그인 성공!!\\r\\n게시판으로 이동합니다.'); location.href='Main.aspx';</script>";
             }
             else
             {
@@ -62,7 +62,6 @@ namespace community.main
             con.Close();
 
             this.ClientScript.RegisterClientScriptBlock(this.GetType(), "login", script);
-
         }
     }
 }
