@@ -26,15 +26,15 @@ namespace community.main
 
             cmd.Connection = con;
 
-            cmd.CommandText = "select * from people where id=@id and password=@password";
+            cmd.CommandText = "select * from people where id=@id and pw=@pw";
 
             cmd.Parameters.Add("@id", SqlDbType.VarChar, 50);
 
-            cmd.Parameters.Add("@password", SqlDbType.VarChar, 50);
+            cmd.Parameters.Add("@pw", SqlDbType.VarChar, 50);
 
             cmd.Parameters["@id"].Value = Idtxt.Text;
 
-            cmd.Parameters["@password"].Value = Pwtxt.Text;
+            cmd.Parameters["@pw"].Value = Pwtxt.Text;
 
             con.Open();
 
