@@ -29,14 +29,14 @@ namespace community.main
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText =
-                "select * from people where id=@id and password=@password";
+                "select * from people where id=@id and pw=@pw";
                 cmd.Parameters.Add("@id", SqlDbType.VarChar, 50);
 
-                cmd.Parameters.Add("@password", SqlDbType.VarChar, 50);
+                cmd.Parameters.Add("@pw", SqlDbType.VarChar, 50);
 
                 cmd.Parameters["@id"].Value = username.Text;
 
-                cmd.Parameters["@password"].Value = password.Text;
+                cmd.Parameters["@pw"].Value = password.Text;
                 conn.Open();
                 SqlDataReader rd = cmd.ExecuteReader();
                 bool hasSubscribed = rd.Read();
@@ -49,17 +49,25 @@ namespace community.main
                     test.Text = "이미 가입된 아이디입니다.";
                 }
                
-                string insertSQL = "INSERT INTO people(Id, password) ";
-                insertSQL += "VALUES(@id, @password)";
+                string insertSQL = "INSERT INTO people(Id, pw, name, email) ";
+                insertSQL += "VALUES(@id, @pw, @name, @email)";
                 
                 cmd = new SqlCommand(insertSQL, conn);
                 cmd.Parameters.Add("@id", SqlDbType.VarChar, 50);
 
-                cmd.Parameters.Add("@password", SqlDbType.VarChar, 50);
+                cmd.Parameters.Add("@pw", SqlDbType.VarChar, 50);
 
-                cmd.Parameters["@id"].Value = username.Text;
+                cmd.Parameters.Add("@name", SqlDbType.VarChar, 50);
 
-                cmd.Parameters["@password"].Value = password.Text;
+                cmd.Parameters.Add("@email", SqlDbType.VarChar, 50);
+
+                cmd.Parameters["@id"].Value = Id.Text;
+
+                cmd.Parameters["@pw"].Value = password.Text;
+
+                cmd.Parameters["@name"].Value = username.Text;
+
+                cmd.Parameters["@email"].Value = Email.Text;
 
                 cmd.ExecuteNonQuery();
                 Message = @"성공적으로 가입되었습니다.";
