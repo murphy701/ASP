@@ -52,14 +52,19 @@
 
     <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
+            <form id="form1" runat="server">
                 <nav class="nav nav-masthead justify-content-center float-md-right">
                     <a class="navbar-brand" href="homePage.aspx">Community</a>
+                    <% if (Request.Cookies["name"] == null) { %>
                     <a class="nav-link ms-auto" href="users/login.aspx">Login</a>
                     <a class="nav-link" href="users/SignUp.aspx">Register</a>
-                    <form id="form1" runat="server">
+                    <% } %>
+                    <% else{ %>
+                        <asp:Label ID="username"  class="navbar-brand ms-auto" runat="server" ><%= Request.Cookies["name"].Value %></asp:Label>
                         <asp:LinkButton ID="LinkButton1" runat="server" class="nav-link" OnClick="btnLogout_Click">Logout</asp:LinkButton>
-                    </form>
-                </nav>          
+                    <% } %>
+                </nav> 
+            </form>
         </header>
         <main class="px-3">
             <h1>Community</h1>
