@@ -20,7 +20,7 @@ namespace community.main
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Community"].ConnectionString);//conString 아직 연결 안됨
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Community"].ConnectionString);
 
             SqlCommand cmd = new SqlCommand();
 
@@ -49,10 +49,10 @@ namespace community.main
                 FormsAuthentication.SetAuthCookie(Idtxt.Text, false);
 
                 //추가 정보 기억
-                //Response.Cookies["name"].Value = reader["name"].ToString();
-                //Response.Cookies["email"].Value = reader["email"].ToString();
+                Response.Cookies["name"].Value = reader["name"].ToString();
+                Response.Cookies["email"].Value = reader["email"].ToString();
 
-                script = "<script type='text/javascript'>alert('로그인 성공!!\\r\\n게시판으로 이동합니다.'); location.href='../main/MainPage.aspx';</script>";
+                script = "<script type='text/javascript'>alert('로그인 성공!!'); location.href='../homePage.aspx';</script>";
             }
             else
             {

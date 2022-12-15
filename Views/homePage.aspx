@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFIle="HomePage.aspx.cs" Inherits="HomePage" %>
 <html lang="ko">
 
 <head>
@@ -52,17 +52,25 @@
 
     <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
+            <form id="form1" runat="server">
                 <nav class="nav nav-masthead justify-content-center float-md-right">
                     <a class="navbar-brand" href="homePage.aspx">Community</a>
+                    <% if (Request.Cookies["name"] == null) { %>
                     <a class="nav-link ms-auto" href="users/login.aspx">Login</a>
-                    <a class="nav-link" href="users/SignUp.aspx">Register</a>                                
-                </nav>          
+                    <a class="nav-link" href="users/SignUp.aspx">Register</a>
+                    <% } %>
+                    <% else{ %>
+                        <asp:Label ID="username"  class="navbar-brand ms-auto" runat="server" ><%= Request.Cookies["name"].Value %></asp:Label>
+                        <asp:LinkButton ID="LinkButton1" runat="server" class="nav-link" OnClick="btnLogout_Click">Logout</asp:LinkButton>
+                    <% } %>
+                </nav> 
+            </form>
         </header>
         <main class="px-3">
             <h1>Community</h1>
-            <a href="main/MainPage.aspx" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
+            <a href="main/Show.aspx" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
                Main</a>
-            <a href="main/MainPage.aspx" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
+            <a href="main/Show.aspx" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
                Main</a>
         </main>
 
