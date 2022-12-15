@@ -12,4 +12,14 @@ public partial class HomePage : System.Web.UI.Page
     {
 
     }
+
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {
+        
+        FormsAuthentication.SignOut();
+        Response.Cookies["name"].Expires = DateTime.Now.AddDays(-1d);
+        Response.Cookies["email"].Expires = DateTime.Now.AddDays(-1d);
+        Response.Redirect("../Views/homePage.aspx");
+
+    }
 }

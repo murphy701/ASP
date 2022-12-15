@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFIle="HomePage.aspx.cs" Inherits="HomePage" %>
 <html lang="ko">
 
 <head>
@@ -55,14 +55,17 @@
                 <nav class="nav nav-masthead justify-content-center float-md-right">
                     <a class="navbar-brand" href="homePage.aspx">Community</a>
                     <a class="nav-link ms-auto" href="users/login.aspx">Login</a>
-                    <a class="nav-link" href="users/SignUp.aspx">Register</a>                                
+                    <a class="nav-link" href="users/SignUp.aspx">Register</a>
+                    <form id="form1" runat="server">
+                        <asp:LinkButton ID="LinkButton1" runat="server" class="nav-link" OnClick="btnLogout_Click">Logout</asp:LinkButton>
+                    </form>
                 </nav>          
         </header>
         <main class="px-3">
             <h1>Community</h1>
-            <a href="main/MainPage.aspx" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
+            <a href="main/Show.aspx" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
                Main</a>
-            <a href="main/MainPage.aspx" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
+            <a href="main/Show.aspx" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
                Main</a>
         </main>
 
