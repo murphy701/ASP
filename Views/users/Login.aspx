@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFIle="Login.aspx.cs" Inherits="ASP-.main.Login" MasterPageFile="/WebEx/ASP-/Views/layouts/SiteTemplate.master" Debug="true" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFIle="Login.aspx.cs" Inherits="community.main.Login" MasterPageFile="/WebEx/ASP-/Views/layouts/SiteTemplate.master" Debug="true" %>
 
 <asp:Content ID="loginContent" ContentPlaceHolderID="cphFirstContent" Runat="Server">      
     <div class="container d-flex justify-content-center align-items-center mt-3 mb-5">
