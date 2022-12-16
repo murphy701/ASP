@@ -22,7 +22,7 @@
                                 <asp:TextBox ID="Email" runat="server"></asp:TextBox>
                             </div> 
                             <div class="mb-3">
-                                <asp:Label ID="test" runat="server" Text=""></asp:Label>
+                                <asp:Label ID="vaild" runat="server" Text=""></asp:Label>
                             </div>
                             <div class="mb-3">
                                 <asp:Button class="btn btn-success" ID="btnSubscribe" runat="server" Text="가입" 

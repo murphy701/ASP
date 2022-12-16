@@ -46,7 +46,9 @@ namespace community.main
                 {
                     username.Text = "";
                     password.Text = "";
-                    test.Text = "이미 가입된 아이디입니다.";
+                    Email.Text = "";
+                    Id.Text = "";
+                    vaild.Text = "중복된 아이디나 이름이 있습니다.";
                 }
                
                 string insertSQL = "INSERT INTO people(Id, pw, name, email) ";
