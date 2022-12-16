@@ -60,7 +60,7 @@
                     <a class="nav-link" href="users/SignUp.aspx">Register</a>
                     <% } %>
                     <% else{ %>
-                        <asp:Label ID="username"  class="navbar-brand ms-auto" runat="server" ><%= Request.Cookies["name"].Value %></asp:Label>
+                        <asp:Label ID="username" class="navbar-brand ms-auto fs-5" runat="server"><%= Request.Cookies["name"].Value %></asp:Label>
                         <asp:LinkButton ID="LinkButton1" runat="server" class="nav-link" OnClick="btnLogout_Click">Logout</asp:LinkButton>
                     <% } %>
                 </nav> 
