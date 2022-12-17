@@ -14,7 +14,7 @@ public partial class ShowPage : System.Web.UI.Page
         if (flag == "N")
         {
             returnString += "<a href='detail.aspx?sn=" + id;
-            returnString += "' class='a01'>" + title + "</a>";
+            returnString += "'class='card-body'>" + title + "</a>";
         }
         // flag 필드 값이 Y인 경우, 즉 삭제된 게시물
         else
