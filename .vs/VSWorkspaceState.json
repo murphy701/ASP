@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ASP-",
-    "\\ASP-\\public",
-    "\\ASP-\\Views",
-    "\\ASP-\\Views\\users"
+    "\\Views",
+    "\\Views\\main",
+    "\\Views\\users"
   ],
-  "SelectedNode": "\\ASP-\\Views\\users\\Login.aspx",
+  "SelectedNode": "\\Views\\main\\New.aspx",
   "PreviewInSolutionExplorer": false
 }

@@ -13,13 +13,12 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="password">Password</label>
-                                <asp:TextBox ID="Pwtxt" class="form-control" runat="server"></asp:TextBox>
-                                
+                                <asp:TextBox ID="Pwtxt" class="form-control" runat="server"></asp:TextBox>   
                             </div>
                             <div class="d-grid gap-2">
                                 <asp:Button ID="LoginButton" class="btn btn-success" runat="server" onclick="LoginButton_Click" Text="Login" />
                                 <asp:Button ID="SignUp" class="btn btn-success" runat="server" Text="SignUp"></asp:Button>
-                                <asp:Button ID="Find" class="btn btn-success" runat="server" Text="아이디찾기/비밀번호찾기"></asp:Button>
+                                <asp:Button ID="Find" class="btn btn-success" runat="server" Text="아이디/비밀번호 찾기"></asp:Button>
                             </div>
                     </div>
                 </div>
