@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFIle="Login.aspx.cs" Inherits="community.main.Login" MasterPageFile="../layouts/SiteTemplate.master" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFIle="Login.aspx.cs" Inherits="community.user.Login" MasterPageFile="../layouts/SiteTemplate.master" %>
 
 <asp:Content ID="loginContent" ContentPlaceHolderID="cphFirstContent" Runat="Server">      
     <div class="container d-flex justify-content-center align-items-center mt-3 mb-5">
@@ -18,7 +18,7 @@
                             <div class="d-grid gap-2">
                                 <asp:Button ID="LoginButton" class="btn btn-success" runat="server" onclick="LoginButton_Click" Text="Login" />
                                 <asp:Button ID="SignUp" class="btn btn-success" runat="server" Text="SignUp"></asp:Button>
-                                <asp:Button ID="Find" class="btn btn-success" runat="server" Text="아이디/비밀번호 찾기"></asp:Button>
+                                
                             </div>
                     </div>
                 </div>

@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration;
 
-namespace community.main
+namespace community.user
 {
     public partial class SignUp : System.Web.UI.Page
     {

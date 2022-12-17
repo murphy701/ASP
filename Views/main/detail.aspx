@@ -1,5 +1,5 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFIle="detail.aspx.cs" Inherits="DetailPage" MasterPageFile="../layouts/SiteTemplate.master" %>
 
-<asp:Content ID="loginContent" ContentPlaceHolderID="cphFirstContent" Runat="Server">
-    <h1>¼öÁ¤</h1>
+<asp:Content ID="detailContent" ContentPlaceHolderID="cphFirstContent" Runat="Server">
+    <h1>detail</h1>
 </asp:Content>

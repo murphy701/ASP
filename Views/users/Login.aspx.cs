@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Web.Security;
 
-namespace community.main
+namespace community.user
 {
     public partial class Login : System.Web.UI.Page
     {
@@ -52,11 +52,11 @@ namespace community.main
                 Response.Cookies["name"].Value = reader["name"].ToString();
                 Response.Cookies["email"].Value = reader["email"].ToString();
 
-                script = "<script type='text/javascript'>alert('로그인 성공!!'); location.href='../homePage.aspx';</script>";
+                Response.Redirect("../HomePage.aspx");
             }
             else
             {
-                script = "<script type='text/javascript'>alert('로그인 실패!!');</script>";
+                Response.Redirect("../users/Login.aspx");
             }
 
             reader.Close();
