@@ -27,5 +27,8 @@
             </div>
         </div>        
     </div>
+        <div style="float:right" class="px-3">
+    <asp:Button ID="Delete" onClick="Delete_Click" runat="server" Text="글 삭제" />
+        </div>
      
 </asp:Content>
