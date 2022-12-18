@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class ShowPage : System.Web.UI.Page
 {
+
     protected string ShowTitle(string title, string id, string flag)
     {
         string returnString = "";

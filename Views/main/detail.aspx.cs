@@ -14,7 +14,7 @@ public partial class DetailPage : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+
 
         if (!IsPostBack)
         {
@@ -29,10 +29,9 @@ public partial class DetailPage : System.Web.UI.Page
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                name.Text = dr["name"].ToString();
-                id.Text = dr["id"].ToString();
-                tag.Text = dr["tag"].ToString();
-                title.Text += dr["title"].ToString();
+                title.Text = "제목: " + dr["title"].ToString();
+                name.Text = "작성자: " + dr["name"].ToString();
+                tag.Text = "tag: " + dr["tag"].ToString();
                 message.Text = dr["message"].ToString();
 
 
