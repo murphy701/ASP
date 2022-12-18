@@ -31,9 +31,9 @@ namespace community.main
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    name.Text = "¿€º∫¿⁄: " + dr["name"].ToString();
-                    tag.Text = "≈¬±◊: " + dr["tag"].ToString();
-                    title.Text = "¡¶∏Ò: " + dr["title"].ToString();
+                    name.Text = "√Ä√õ¬º¬∫√Ä√ö: " + dr["name"].ToString();
+                    tag.Text = "√Ö√Ç¬±√ó: " + dr["tag"].ToString();
+                    title.Text = "√Å¬¶¬∏√±: " + dr["title"].ToString();
                     message.Text = dr["message"].ToString();
 
                     btnEdit.PostBackUrl =
@@ -44,6 +44,25 @@ namespace community.main
                     con.Close();
                 }
             }
+        }
+        protected void Delete_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Community"].ConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "delete from board where id=@id";
+            cmd.Parameters.Add("@id", SqlDbType.Int);
+            cmd.Parameters["@id"].Value = Request["sn"];
+
+
+            con.Open();
+
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            con.Close();
+            Response.Redirect("../homePage.aspx");
+
         }
    }
 }
