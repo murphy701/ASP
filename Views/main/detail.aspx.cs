@@ -31,9 +31,9 @@ namespace community.main
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    name.Text = "ÀÛ¼ºÀÚ: " + dr["name"].ToString();
-                    tag.Text = "ÅÂ±×: " + dr["tag"].ToString();
-                    title.Text = "Á¦¸ñ: " + dr["title"].ToString();
+                    name.Text = "작성자 " + dr["name"].ToString();
+                    tag.Text = "태그: " + dr["tag"].ToString();
+                    title.Text = "제목: " + dr["title"].ToString();
                     message.Text = dr["message"].ToString();
 
                     btnEdit.PostBackUrl =
@@ -50,7 +50,7 @@ namespace community.main
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Community"].ConnectionString);
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "delete from board where id=@id";
+            cmd.CommandText = "DELETE FROM board WHERE id=@id";
             cmd.Parameters.Add("@id", SqlDbType.Int);
             cmd.Parameters["@id"].Value = Request["sn"];
 
@@ -61,7 +61,7 @@ namespace community.main
             SqlDataReader reader = cmd.ExecuteReader();
 
             con.Close();
-            Response.Redirect("../homePage.aspx");
+            Response.Redirect("./Show.aspx");
 
         }
    }

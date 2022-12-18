@@ -4,7 +4,8 @@
     <div class="row">
         <div class="col-lg-6 col-sm-12 offset-3">
             <% if (Request.Cookies["name"] != null) { %>
-                    <asp:Button ID="btnEdit" class="btn btn-primary" runat="server"  Text="Edit" />           
+                    <asp:Button ID="btnEdit" class="btn btn-primary" runat="server"  Text="Edit" />
+                    <asp:Button ID="Delete" class="btn btn-danger" onClick="Delete_Click" runat="server" Text="DELETE" />
             <% } %>
             <div class="card">
 
@@ -27,8 +28,8 @@
             </div>
         </div>        
     </div>
-        <div style="float:right" class="px-3">
-    <asp:Button ID="Delete" onClick="Delete_Click" runat="server" Text="글 삭제" />
-        </div>
+        
+   
+        
      
 </asp:Content>
