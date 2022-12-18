@@ -1,5 +1,19 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFIle="detail.aspx.cs" Inherits="DetailPage" MasterPageFile="../layouts/SiteTemplate.master" %>
 
-<asp:Content ID="loginContent" ContentPlaceHolderID="cphFirstContent" Runat="Server">
-    <h1>¼öÁ¤</h1>
+<asp:Content ID="detailContent" ContentPlaceHolderID="cphFirstContent" Runat="Server"> 
+    <div>
+        <asp:Label ID="id" runat="server"></asp:Label>
+    </div>
+    <div>
+        <asp:Label ID="title" runat="server"></asp:Label>
+    </div>
+    <div>
+        <asp:Label ID="name" runat="server"></asp:Label>
+    </div>
+    <div>
+        <asp:Label ID="tag" runat="server"></asp:Label>
+    </div>
+    <div>
+        <asp:Label ID="message" runat="server"></asp:Label>
+    </div>
 </asp:Content>

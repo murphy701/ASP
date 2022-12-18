@@ -1,5 +1,5 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFIle="Edit.aspx.cs" Inherits="EditPage" MasterPageFile="../layouts/SiteTemplate.master" %>
 
-<asp:Content ID="loginContent" ContentPlaceHolderID="cphFirstContent" Runat="Server">
+<asp:Content ID="editContent" ContentPlaceHolderID="cphFirstContent" Runat="Server">
     <h1>¼öÁ¤</h1>
 </asp:Content>

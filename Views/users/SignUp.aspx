@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFIle="SignUp.aspx.cs" Inherits="community.main.SignUp" MasterPageFile="../layouts/SiteTemplate.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFIle="SignUp.aspx.cs" Inherits="community.user.SignUp" MasterPageFile="../layouts/SiteTemplate.master" %>
 
 
 <asp:Content ID="signUpContent" ContentPlaceHolderID="cphFirstContent" Runat="Server">
@@ -24,7 +24,7 @@
                             <div class="mb-3">
                                 <asp:Label ID="vaild" runat="server" Text=""></asp:Label>
                             </div>
-                            <div class="mb-3">
+                            <div class="d-grid gap-2">
                                 <asp:Button class="btn btn-success" ID="btnSubscribe" runat="server" Text="가입" 
                                 onclick="btnSubscribe_Click" />                          
                             </div>                         
