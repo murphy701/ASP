@@ -17,8 +17,8 @@
                             </div>
                             <div class="d-grid gap-2">
                                 <asp:Button ID="LoginButton" class="btn btn-success" runat="server" onclick="LoginButton_Click" Text="Login" />
-                                <asp:Button ID="SignUp" class="btn btn-success" runat="server" Text="SignUp"></asp:Button>
                                 
+                                <asp:Button ID="SignUpButton" class="btn btn-success" runat="server" onclick="SignUpButton_Click" Text="SignUp"></asp:Button>
                             </div>
                     </div>
                 </div>

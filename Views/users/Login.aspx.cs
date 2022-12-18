@@ -64,5 +64,9 @@ namespace community.user
 
             this.ClientScript.RegisterClientScriptBlock(this.GetType(), "login", script);
         }
+        protected void SignUpButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../users/SignUp.aspx");
+        }
     }
 }
