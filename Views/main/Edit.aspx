@@ -1,8 +1,9 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFIle="Edit.aspx.cs" Inherits="EditPage" MasterPageFile="../layouts/SiteTemplate.master" Debug="true"%>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFIle="Edit.aspx.cs" Inherits="community.main.EditPage" MasterPageFile="../layouts/SiteTemplate.master" Debug="true"%>
 
 <asp:Content ID="editContent" ContentPlaceHolderID="cphFirstContent" Runat="Server">
     <div class="row">
        <div class="col-6 offset-3 mt-auto">
+
            <div class="mb-3">
                 <label class="form-label" for="username">닉네임:</label>
                 <asp:TextBox ID="username" runat="server" class="form-control"></asp:TextBox>
@@ -23,10 +24,12 @@
             </div>
             <div class="mb-3">
                 <label class="form-label" for="message">글 작성:</label>
-                <asp:TextBox ID="message" class="form-control" runat="server" Height="200px" TextMode="MultiLine"></asp:TextBox>   
+                <asp:TextBox ID="message" class="form-control" runat="server" Height="200px" TextMode="MultiLine"></asp:TextBox> 
+                
             </div> 
            <asp:Button ID="SubmitButton" class="btn btn-success" runat="server" onclick="btnEdit_Click" Text="submit" />
         </div>
+        
     </div>
 
 </asp:Content>
