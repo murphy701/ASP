@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFIle="detail.aspx.cs"  MasterPageFile="../layouts/SiteTemplate.master" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFIle="detail.aspx.cs"  Inherits="community.main.DetailPage" MasterPageFile="../layouts/SiteTemplate.master" %>
 
 <asp:Content ID="detailContent" ContentPlaceHolderID="cphFirstContent" Runat="Server"> 
     <div>

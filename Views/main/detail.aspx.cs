@@ -9,40 +9,41 @@ using System.Data.SqlClient;
 using System.Configuration;
 
 
-
-public partial class DetailPage : System.Web.UI.Page
+namespace community.main
 {
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class DetailPage : System.Web.UI.Page
     {
-        
-
-        if (!IsPostBack)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Community"].ConnectionString);
 
-            string selectString = "SELECT * FROM board WHERE id=" + Request["sn"];
 
-            SqlCommand cmd = new SqlCommand(selectString);
-            cmd.Connection = con;
-            con.Open();
-            cmd.ExecuteNonQuery();
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
+            if (!IsPostBack)
             {
-                name.Text = dr["name"].ToString();
-                id.Text = dr["id"].ToString();
-                tag.Text = dr["tag"].ToString();
-                title.Text += dr["title"].ToString();
-                message.Text = dr["message"].ToString();
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Community"].ConnectionString);
+
+                string selectString = "SELECT * FROM board WHERE id=" + Request["sn"];
+
+                SqlCommand cmd = new SqlCommand(selectString);
+                cmd.Connection = con;
+                con.Open();
+                cmd.ExecuteNonQuery();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    name.Text = dr["name"].ToString();
+                    id.Text = dr["id"].ToString();
+                    tag.Text = dr["tag"].ToString();
+                    title.Text += dr["title"].ToString();
+                    message.Text = dr["message"].ToString();
 
 
-                dr.Close();
-                con.Close();
+                    dr.Close();
+                    con.Close();
+                }
             }
         }
+
+
     }
-
-   
 }
-
 
