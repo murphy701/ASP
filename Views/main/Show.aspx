@@ -21,7 +21,7 @@
                 </asp:BoundField>
 
                 <asp:TemplateField  HeaderText="제목" HeaderStyle-Width="100px"  >
-                    <ItemTemplate  >
+                    <ItemTemplate>
                         <%# ShowTitle(
                             Eval("title").ToString(), Eval("id").ToString(),Eval("flag").ToString()) %>
                     </ItemTemplate>
