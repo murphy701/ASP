@@ -27,14 +27,13 @@ namespace community.main
 
             cmd.Connection = conn;
             cmd.CommandText =
-               "select * from board where name=@id";
+               "select * from board where name=@name";
 
             cmd.Parameters.Add("@name", SqlDbType.NVarChar, 50);
 
             cmd.Parameters.Add("@title", SqlDbType.NVarChar, 50);
 
             cmd.Parameters.Add("@tag", SqlDbType.NVarChar, 10);
-
 
             cmd.Parameters.Add("@message", SqlDbType.NVarChar, 50);
 
