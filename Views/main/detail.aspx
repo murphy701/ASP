@@ -3,10 +3,13 @@
 <asp:Content ID="detailContent" ContentPlaceHolderID="cphFirstContent" Runat="Server"> 
     <div class="row">
         <div class="col-lg-6 col-sm-12 offset-3">
+            <% if (Request.Cookies["name"] != null) { %>
+                    <asp:Button ID="btnEdit" class="btn btn-primary" runat="server"  Text="Edit" />           
+            <% } %>
             <div class="card">
+
                 <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        
+                    <ul class="list-group list-group-flush">                        
                         <li class="list-group-item card-title">
                             <asp:Label ID="title" runat="server"></asp:Label>
                         </li>
@@ -24,5 +27,5 @@
             </div>
         </div>        
     </div>
-    <asp:Button ID="btnEdit" runat="server" Text="Button" />
+     
 </asp:Content>
