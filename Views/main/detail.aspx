@@ -24,4 +24,5 @@
             </div>
         </div>        
     </div>
+    <asp:Button ID="btnEdit" runat="server" Text="Button" />
 </asp:Content>

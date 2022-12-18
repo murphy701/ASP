@@ -16,6 +16,8 @@ namespace community.main
         protected void Page_Load(object sender, EventArgs e)
 
         {
+            
+
             if (!IsPostBack)
             {
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Community"].ConnectionString);
@@ -29,11 +31,13 @@ namespace community.main
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    name.Text = dr["name"].ToString();
-                    tag.Text = dr["tag"].ToString();
-                    title.Text += dr["title"].ToString();
+                    name.Text = "작성자: " + dr["name"].ToString();
+                    tag.Text = "태그: " + dr["tag"].ToString();
+                    title.Text = "제목: " + dr["title"].ToString();
                     message.Text = dr["message"].ToString();
 
+                    btnEdit.PostBackUrl =
+                    "./edit.aspx?sn=" + dr["id"].ToString();
 
 
                     dr.Close();

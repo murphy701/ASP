@@ -72,8 +72,6 @@
             <h1>Community</h1>
             <a href="main/Show.aspx" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
                Main</a>
-            <a href="main/Show.aspx" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
-               Main</a>
         </main>
 
         <footer class="mt-auto text-white-50">
