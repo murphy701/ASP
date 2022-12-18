@@ -13,12 +13,24 @@ namespace community.main
 {
     public partial class DetailPage : System.Web.UI.Page
     {
+<<<<<<< HEAD
+
+
+        if (!IsPostBack)
+=======
         protected void Page_Load(object sender, EventArgs e)
+>>>>>>> c5a924b34ff4eeb496585e0aa7c90b686cb1a82a
         {
 
 
             if (!IsPostBack)
             {
+<<<<<<< HEAD
+                title.Text = "제목: " + dr["title"].ToString();
+                name.Text = "작성자: " + dr["name"].ToString();
+                tag.Text = "tag: " + dr["tag"].ToString();
+                message.Text = dr["message"].ToString();
+=======
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Community"].ConnectionString);
 
                 string selectString = "SELECT * FROM board WHERE id=" + Request["sn"];
@@ -35,6 +47,7 @@ namespace community.main
                     tag.Text = dr["tag"].ToString();
                     title.Text += dr["title"].ToString();
                     message.Text = dr["message"].ToString();
+>>>>>>> c5a924b34ff4eeb496585e0aa7c90b686cb1a82a
 
 
                     dr.Close();
